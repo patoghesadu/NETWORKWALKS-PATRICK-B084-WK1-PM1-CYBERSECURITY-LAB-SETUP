@@ -21,23 +21,23 @@ The lab is set up on a private virtual network, so I can add more virtual machin
 
 ## 🎯 Objectives
 
-The main objectives of this project are to:
+The main objectives of this project is to:
 
 - Install and configure VirtualBox.
-- Install/import Kali Linux as a virtual machine.
+- Install and import Kali Linux as a virtual machine.
 - Create a private "NAT Network" for the cybersecurity lab.
 - Configure network connectivity for Kali Linux.
-- Assign a consistent IP address to the Kali VM.
+- Assign an IP address to the Kali Virtual Machine
 - Verify network connectivity and DNS resolution.
-- Take a clean VM snapshot for recovery.
+- Take a VM snapshot for recovery.
 - Document the complete setup process.
-- Prepare the environment for future cybersecurity projects.
+- Prepare the environment for any future cybersecurity projects.
 
 ---
 
 ## 🛡️ Purpose of the Lab
 
-The lab provides an isolated and controlled environment for cybersecurity learning and authorized security testing.
+I use the lab to practice cybersecurity, explore security tools, and carry out authorized tests in a safe environment without putting other systems at risk.
 
 It can be used for activities such as:
 
@@ -66,8 +66,8 @@ Additional target machines can be added to the same virtual network in future pr
 
 | 🧩 Component       | ⚙️ Configuration   |
 | ------------------ | ------------------  |
-| 🖥️ Host OS         | Windows 10         |
-| 🧠 Host RAM        | 8 GB               |
+| 🖥️ Host OS         | Windows 11        |
+| 🧠 Host RAM        | 32 GB               |
 | ⚡ Processor       | Intel Core i7      |
 | 🧰 Hypervisor      | VirtualBox 7.2  |
 | 🐉 Security OS     | Kali Linux 2026.2  |
@@ -85,7 +85,7 @@ Additional target machines can be added to the same virtual network in future pr
 
 ## Step 1. Install 7-Zip
 
-7-Zip was installed to extract the Kali Linux virtual-machine package, which may be distributed as a `.7z` archive.
+I installed 7-zip to extract the Kali Linux virtual-machine package, which may be distributed as a `.7z` archive.
 
 **Tool:** 7-Zip
 
