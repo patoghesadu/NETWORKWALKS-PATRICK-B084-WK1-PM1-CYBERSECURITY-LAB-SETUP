@@ -55,7 +55,7 @@ It can be used for activities such as:
 
 ## 🏗️ Lab Architecture
 
-![](1-screenshot-title-image.png)
+![]( Screenshot-virtualbox-environment.png)
 
 
 Additional target machines can be added to the same virtual network in future projects.
@@ -107,7 +107,7 @@ IPv4 Prefix:  10.0.0.0/24
 DHCP:         Enabled
 IPv6:         Disabled
 
-![](2-screenshot-network-settings-1.png)
+![]( Screenshot-Network-Settings.png)
 
 A **NAT Network** was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
 
@@ -134,7 +134,7 @@ The VM was allocated:
 ```text
 RAM: 2048 MB
 ```
-![](3-screenshot-kali-linux.png)
+![](Screenshot-kali-linux.png)
 A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
 
 
@@ -143,7 +143,7 @@ A shared folder was also configured for transferring required files between the 
 
 ## Step 5. Configure the Kali Linux Network
 
-The Kali Linux network configuration was checked and configured with a consistent IPv4 address.
+The Kali Linux network configuration was checked and configured with IPv4 address.
 
 Example configuration:
 
@@ -154,9 +154,9 @@ Gateway: 10.0.0.1
 DNS: 8.8.8.8
 ```
 
-A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
+An IP address makes it easier to document the lab and reference the Kali machine in future exercises.
 
-![](4-screenshot-kali-network-settings.png)
+![]( Screenshot-Kali-Network-Settings.png)
 
 ---
 
@@ -225,7 +225,9 @@ The network connection was then restarted/rebooted and connectivity was tested a
 
 ## Problem 2. VirtualBox VT-x / Virtualization Error
 
-The VM initially failed to start because hardware virtualization was disabled in the system firmware/BIOS.
+1. The VM initially failed to start because hardware virtualization was disabled in the system firmware/BIOS.
+
+2. Kali Linux could not connect to internet.
 
 The issue was resolved by:
 
@@ -238,7 +240,11 @@ The issue was resolved by:
 
 After enabling virtualization, the VM started successfully.
 
+1. sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
+2. sudo nmcli connection down "Wired connection 1"
+3. sudo nmcli connection up "Wired connection 1"
 
+   After running the command lines in the terminal, kali connected to the internet
 ---
 
 # 💡 What I Learned
@@ -271,7 +277,7 @@ This provides a known-good recovery point for future cybersecurity exercises.
 
 ### 5. Documentation
 
-I learned that documenting commands, configuration, screenshots, problems, and solutions is an important part of a professional cybersecurity project.
+I learned that keeping proper records of commands, configurations, screenshots, challenges, and their solutions is an important part of carrying out a professional cybersecurity project.
 
 ---
 
@@ -291,11 +297,9 @@ This laboratory is intended strictly for education purposes only.
 
 # 👤 Author
 
-**Waqas Karim**\
-Cybersecurity Professional B082
+**Patrick Adu**\
 
-LinkedIn: [https://www.linkedin.com/in/waqaskarim/](https://www.linkedin.com/in/waqaskarim/)
-
+LinkedIn: [(https://www.linkedin.com/in/patrick-adu-416770132/)](https://www.linkedin.com/in/patrick-adu-416770132/)
 ---
 
 ## 📌 Project Information
